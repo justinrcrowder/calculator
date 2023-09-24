@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
         EditText integer2=(EditText) findViewById(R.id.integer2);
         int num1 = Integer.parseInt(integer1.getText().toString());
         int num2 = Integer.parseInt(integer2.getText().toString());
-        result = num1 / num2;
-        if (Double.isInfinite(result)) {
+        if (num2 == 0) {
             Toast.makeText(MainActivity.this, "Cannot divide by zero!", Toast.LENGTH_LONG).show();
         } else {
-            goToResult("" + result);
+            double result1 = num1 / num2;
+            goToResult("" + result1);
         }
     }
     public void goToResult(String result) {
